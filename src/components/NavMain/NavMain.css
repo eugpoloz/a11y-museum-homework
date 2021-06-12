@@ -1,0 +1,26 @@
+.nav-main {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.nav-main__list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: center;
+  list-style: none;
+}
+
+.nav-main__link {
+  height: 48px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  margin-right: 40px;
+}

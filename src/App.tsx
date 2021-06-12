@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import SkipLink from './SkipLink/SkipLink';
+import NavMain from './NavMain/NavMain';
 
 function App() {
   return (
@@ -9,11 +10,12 @@ function App() {
         <SkipLink />
 
         {/* заголовок */}
-        {/* skip link */}
         {/* поиск */}
         {/* переключалка языков */}
         {/* иконка профиля */}
       </header>
+
+      <NavMain />
 
       {/* footer */}
       <footer></footer>
