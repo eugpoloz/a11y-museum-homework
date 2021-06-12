@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
+  position: relative;
   margin: 0;
   font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -13,4 +14,28 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a:hover,
+button:hover {
+  text-decoration: underline;
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid #5d16d5;
+  outline-offset: 2px;
+}
+
+.button {
+  display: block;
+  padding: 13px 18px;
+  font-size: 22px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #000000;
+  background: #c7d2e9;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
 }
