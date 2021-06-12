@@ -8,7 +8,7 @@ interface NavMainLinkProps {
 
 const NavMainLink = ({ children, ...props }: NavMainLinkProps) => {
   return (
-    <li>
+    <li className="nav-main__item">
       <a className="nav-main__link" {...props}>
         {children}
       </a>
@@ -19,7 +19,7 @@ const NavMainLink = ({ children, ...props }: NavMainLinkProps) => {
 const NavMain = () => {
   return (
     <nav id="navigation" className="nav-main">
-      <ul className="nav-main__list">
+      <ul role="presentation" className="nav-main__list">
         <NavMainLink href="#museum">Музей</NavMainLink>
         <NavMainLink href="#exhibitions">Выставки и события</NavMainLink>
         <NavMainLink href="#online-streams">Онлайн-трансляции</NavMainLink>

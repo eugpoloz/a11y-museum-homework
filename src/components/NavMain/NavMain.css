@@ -14,6 +14,10 @@
   list-style: none;
 }
 
+.nav-main__item:not(:last-of-type) {
+  margin-right: 40px;
+}
+
 .nav-main__link {
   height: 48px;
   display: flex;
@@ -22,5 +26,4 @@
   align-content: center;
   justify-content: center;
   white-space: nowrap;
-  margin-right: 40px;
 }
