@@ -4,9 +4,20 @@ import SkipLink from './SkipLink/SkipLink';
 
 function App() {
   return (
-    <div className="App">
-      <SkipLink />
-    </div>
+    <React.Fragment>
+      <header className="container">
+        <SkipLink />
+
+        {/* заголовок */}
+        {/* skip link */}
+        {/* поиск */}
+        {/* переключалка языков */}
+        {/* иконка профиля */}
+      </header>
+
+      {/* footer */}
+      <footer></footer>
+    </React.Fragment>
   );
 }
 

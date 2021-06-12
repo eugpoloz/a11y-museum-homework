@@ -1,6 +1,12 @@
 @import-normalize; /* bring in normalize.css styles */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
   margin: 0;
@@ -14,6 +20,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 6.27%;
+  margin: 0 auto;
 }
 
 a:hover,
