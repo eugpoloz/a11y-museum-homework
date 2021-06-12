@@ -1,20 +1,11 @@
 import React from 'react';
 import './App.css';
-import SkipLink from './SkipLink/SkipLink';
-import NavMain from './NavMain/NavMain';
+import { Header, NavMain } from './components';
 
 function App() {
   return (
     <React.Fragment>
-      <header className="container">
-        <SkipLink />
-
-        {/* заголовок */}
-        {/* поиск */}
-        {/* переключалка языков */}
-        {/* иконка профиля */}
-      </header>
-
+      <Header />
       <NavMain />
 
       {/* footer */}
