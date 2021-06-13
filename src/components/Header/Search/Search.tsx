@@ -51,12 +51,12 @@ export const Search = () => {
           placeholder={labelText}
           aria-label="Введите ваш поисковый запрос"
         />
-        <button className="search__action" type="submit" aria-label="Найти">
-          <span>
-            <SearchIcon className="search__icon" />
-          </span>
-        </button>
       </label>
+      <button className="search__action" type="submit" aria-label="Найти">
+        <span>
+          <SearchIcon className="search__icon" />
+        </span>
+      </button>
     </form>
   );
 };
