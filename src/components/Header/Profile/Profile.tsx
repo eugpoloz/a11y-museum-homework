@@ -32,9 +32,8 @@ export const Profile = () => {
       type="button"
       onClick={openLoginModal}
     >
-      <span>
-        <ProfileIcon />
-      </span>
+      <span className="sr-only">Войти</span>
+      <ProfileIcon />
     </button>
   );
 };
