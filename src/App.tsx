@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Header,
-  NavMain,
-  SkipLink,
-  ArticleMuseum,
-  ArticleLives,
-} from './components';
+import * as Components from './components';
 import { Article } from './shared';
 import { NavLink } from './shared/interfaces';
 import './App.css';
@@ -15,7 +9,7 @@ function App() {
     {
       href: 'museum',
       title: 'Музей',
-      children: <ArticleMuseum />,
+      children: <Components.ArticleMuseum />,
     },
     {
       href: 'exhibitions',
@@ -24,11 +18,12 @@ function App() {
     {
       href: 'streams',
       title: 'Онлайн-трансляции',
+      children: <Components.ArticleStreams />,
     },
     {
       href: 'lives',
       title: 'Экскурсии и лекции в прямом эфире',
-      children: <ArticleLives />,
+      children: <Components.ArticleLives />,
     },
   ];
 
@@ -40,11 +35,11 @@ function App() {
 
   return (
     <div className="museum-app">
-      <SkipLink to="main" />
-      <Header />
+      <Components.SkipLink to="main" />
+      <Components.Header />
 
       <main id="main">
-        <NavMain links={links} />
+        <Components.NavMain links={links} />
         {articles}
       </main>
 
