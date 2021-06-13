@@ -46,7 +46,7 @@ const Header = () => {
       <h1 className="sr-only">{museumName}</h1>
       <a
         className="header__logo"
-        href="/"
+        href="/a11y-museum-homework"
         title="Перейти на главную: Пушкинский музей"
       >
         <Logo />
