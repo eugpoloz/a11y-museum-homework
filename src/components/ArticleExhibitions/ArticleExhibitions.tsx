@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react';
+import React from 'react';
 import {
   RichterImage,
   TattooImage,
@@ -10,8 +10,7 @@ import './ArticleExhibitions.css';
 const exhibitionsList = [
   {
     id: 'richter',
-    filterKey: 'today',
-    href: '#',
+    filterKey: 'tomorrow',
     title: 'Святослав Рихтер в кругу друзей. Москва — Коктебель',
     svg: <RichterImage />,
     date: '27 ноября',
@@ -20,8 +19,7 @@ const exhibitionsList = [
   },
   {
     id: 'tattoo',
-    filterKey: 'tomorrow',
-    href: '#',
+    filterKey: 'today',
     title: 'Тату',
     svg: <TattooImage />,
     date: '27 сентября',
@@ -29,9 +27,8 @@ const exhibitionsList = [
       'Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст',
   },
   {
-    filterKey: '',
+    filterKey: 'tomorrow',
     id: 'durer-matisse',
-    href: '#',
     title:
       'От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина',
     svg: <DurerMatisseImage />,
@@ -45,7 +42,6 @@ interface ExhibitionCardProps {
   title: string;
   date: string;
   id: string;
-  href: string;
   svg?: React.ReactElement;
   children?: string;
 }
@@ -56,7 +52,6 @@ const ExhibitionCard = ({
   title,
   date,
   children,
-  href = '#',
 }: ExhibitionCardProps) => {
   return (
     <section id={id} className="exhibition-card" aria-label={title}>
@@ -71,38 +66,113 @@ const ExhibitionCard = ({
         Выставка до {date}
       </p>
       <p className="exhibition-card__content">{children}</p>
-      <a
-        className="link"
-        href={href}
+      <button
+        type="button"
+        className="button"
         aria-labelledby={`${id}-link ${id}-title`}
       >
         <span id={id + '-link'}>Купить билет</span>
-      </a>
+      </button>
     </section>
   );
 };
 
+type Filter = 'today' | 'tomorrow' | null;
+
+interface FilterButtonProps {
+  currentFilter: Filter;
+  buttonFilter: Filter;
+  children: React.ReactElement | string;
+  onClick?: () => void;
+}
+
+const FilterButton = ({
+  currentFilter,
+  buttonFilter,
+  children,
+  ...props
+}: FilterButtonProps) => {
+  const isActive = currentFilter === buttonFilter;
+  const inactiveClassName = isActive ? '' : 'button--link';
+
+  return (
+    <button
+      className={`button ${inactiveClassName} exhibition-filters__button`}
+      type="button"
+      role="radio"
+      aria-checked={isActive}
+      disabled={isActive}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+
 export const ArticleExhibitions = () => {
-  const [currentFilter, changeCurrentFilter] = useState<string | null>(null);
+  const list = React.useRef([...exhibitionsList]);
+  const [currentFilter, changeCurrentFilter] = React.useState<Filter>(null);
 
-  const list = exhibitionsList
-    .filter(({ filterKey }) => {
-      if (currentFilter) {
-        return filterKey === currentFilter;
-      }
+  list.current = exhibitionsList.filter(({ filterKey }) => {
+    if (currentFilter) {
+      return filterKey === currentFilter;
+    }
 
-      return true;
-    })
-    .map(({ filterKey, ...props }) => (
-      <ExhibitionCard key={props.id} {...props} />
-    ));
+    return true;
+  });
 
   return (
     <React.Fragment>
-      {/* фильтры */}
-      <div className="exhibitions__container" role="presentation">
-        {list}
+      <div
+        className="exhibitions__container"
+        role="radiogroup"
+        aria-controls="exhibition-cards"
+        aria-labelledby="filter"
+      >
+        <span className="sr-only" id="filter">
+          Применить фильтр:
+        </span>
+
+        <FilterButton
+          currentFilter={currentFilter}
+          buttonFilter={null}
+          onClick={() => {
+            changeCurrentFilter(null);
+          }}
+        >
+          Все
+        </FilterButton>
+
+        <FilterButton
+          currentFilter={currentFilter}
+          buttonFilter="today"
+          onClick={() => {
+            changeCurrentFilter('today');
+          }}
+        >
+          Сегодня
+        </FilterButton>
+
+        <FilterButton
+          currentFilter={currentFilter}
+          buttonFilter="tomorrow"
+          onClick={() => {
+            changeCurrentFilter('tomorrow');
+          }}
+        >
+          Завтра
+        </FilterButton>
       </div>
+
+      <output
+        className="exhibitions__container exhibitions__container--cards"
+        id="exhibition-cards"
+        role="presentation"
+      >
+        {list?.current.map(({ filterKey, ...props }) => (
+          <ExhibitionCard key={props.id} {...props} />
+        ))}
+      </output>
       {/* карточки */}
     </React.Fragment>
   );
