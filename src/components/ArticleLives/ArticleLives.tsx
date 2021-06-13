@@ -10,18 +10,19 @@ export const ArticleLives = () => (
       Встречи будут проходить в прямом эфире на платформе Zoom; предусмотрен
       формат живого общения с возможностью задавать вопросы экскурсоводу
       (лектору).
-      <br aria-hidden="true" />
+    </p>
+    <p className="typography--22px">
       <a
         className="link"
-        href="#"
+        href="https://pushkinmuseum.art/media/virtual/index.php?lang=ru"
         title="Узнать, как присоединиться к нашим виртуальным мероприятиям."
       >
-        <span aria-hidden="true">Подробнее.</span>
+        Узнать, как присоединиться к нашим виртуальным мероприятиям.
       </a>
     </p>
     {/* prettier-ignore */}
     <p className="typography--22px">
-      Мы будем благодарны за любое <a className="link" href="#">пожертвование</a>. Все
+      Мы будем благодарны за любое <a className="link" href="https://pushkinmuseum.art/museum/support_us/donate_online/index.php?lang=ru">пожертвование</a>. Все
       поступившие средства будут направлены на организацию онлайн-проектов для
       наших посетителей.
     </p>

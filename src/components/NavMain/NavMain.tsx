@@ -21,7 +21,7 @@ interface NavMainProps {
 
 const NavMain = ({ links }: NavMainProps) => {
   const linksList = links.map(({ href, title }: NavLink) => (
-    <NavMainLink key={href} href={'#' + href}>
+    <NavMainLink key={href} href={href}>
       {title}
     </NavMainLink>
   ));
@@ -33,7 +33,7 @@ const NavMain = ({ links }: NavMainProps) => {
       aria-labelledby="nav-main-title"
     >
       <h2 id="nav-main-title" className="sr-only">
-        Перейти к разделам главной страницы
+        Основная навигация
       </h2>
       <ul role="presentation" className="nav-main__list">
         {linksList}
