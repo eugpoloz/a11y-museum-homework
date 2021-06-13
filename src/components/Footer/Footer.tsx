@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
 import './Footer.css';
 import * as Icons from './Icons';
 
@@ -14,7 +13,10 @@ export const Footer = () => {
             className="footer-nav typography--18px"
             aria-labelledby="footer-nav-title"
           >
-            <h3 id="footer-nav-title" className="sr-only">
+            <h3
+              id="footer-nav-title"
+              className="typography--22px footer__title"
+            >
               Дополнительные ссылки
             </h3>
             <ul role="presentation" className="footer-nav__list">
@@ -80,8 +82,50 @@ export const Footer = () => {
           </nav>
         </section>
 
-        <section></section>
         {/* подписка */}
+        <section
+          className="footer__section"
+          aria-labelledby="footer-subscription-title"
+        >
+          <form id="footer-subscription" autoComplete="on">
+            <h3
+              id="footer-subscription-title"
+              className="typography--22px footer__title"
+            >
+              Подписка на новости
+            </h3>
+
+            <label className="footer-subscription__row" htmlFor="email">
+              Email
+            </label>
+            <div role="presentation" className="footer-subscription__row">
+              <label className="input__wrapper" role="presentation">
+                <input
+                  id="email"
+                  type="email"
+                  className="input footer-subsciption__email typography--18px"
+                  autoComplete="on"
+                  placeholder="name@domain.zone"
+                  required
+                  min="2"
+                />
+              </label>
+            </div>
+
+            <label className="footer-subscription__row footer-subscription__row--checkbox">
+              <input
+                type="checkbox"
+                required
+                className="footer-subscription__checkbox"
+              />
+              <span>Соглашаюсь на обработку персональных данных</span>
+            </label>
+
+            <button type="submit" className="button">
+              Подписаться
+            </button>
+          </form>
+        </section>
       </div>
     </footer>
   );

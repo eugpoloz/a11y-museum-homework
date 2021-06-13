@@ -6,7 +6,7 @@
 .footer {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: flex-start;
   align-content: center;
   justify-content: center;
   padding-top: 73px;
@@ -21,6 +21,10 @@
 
 .footer__section:not(:last-of-type) {
   margin-right: 16px;
+}
+
+.footer__title {
+  margin-bottom: 16px;
 }
 
 /* навигация */
@@ -38,7 +42,6 @@
 
 /* соцсети */
 .footer-social__list {
-  margin-top: 15px;
   margin-left: -4px;
   display: flex;
   flex-flow: row nowrap;
@@ -63,4 +66,40 @@
 
 .footer-social__link svg {
   color: inherit;
+}
+
+/* подписка */
+.footer-subscription__row {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-subscription__row:last-of-type {
+  margin-bottom: 16px;
+}
+
+.footer-subscription__row--checkbox {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.footer-subscription__checkbox {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: #f9f9fb;
+  border: none;
+  box-shadow: inset 0 0 0 1px #c7d2e9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.footer-subscription__checkbox + span {
+  margin-left: 8px;
+  line-height: 24px;
 }

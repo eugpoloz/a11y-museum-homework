@@ -38,14 +38,14 @@ export const Search = () => {
   // };
 
   return (
-    <form className="search__form" id="search-form">
+    <form className="input__wrapper search__form" id="search-form">
       <label
-        className="search__container"
+        className="search__container input__container"
         htmlFor="search"
         aria-label={labelText}
       >
         <input
-          className="search typography--18px"
+          className="search input typography--18px"
           id="search"
           type="search"
           placeholder={labelText}
