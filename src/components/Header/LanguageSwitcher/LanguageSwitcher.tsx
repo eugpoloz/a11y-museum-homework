@@ -40,7 +40,7 @@ export const LanguageSwitcher = () => {
           switchActiveLanguage('ru');
         }}
       >
-        <span aria-label="Переключиться на русский язык">Рус</span>
+        <span aria-label="Переключиться на русский язык">Ру</span>
       </LanguageButton>
       <LanguageButton
         isActive={activeLanguage === 'en'}
@@ -48,7 +48,7 @@ export const LanguageSwitcher = () => {
           switchActiveLanguage('en');
         }}
       >
-        <span aria-label="Switch to English">Eng</span>
+        <span aria-label="Switch to English">En</span>
       </LanguageButton>
     </div>
   );
