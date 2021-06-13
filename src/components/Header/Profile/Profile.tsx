@@ -27,7 +27,11 @@ export const Profile = () => {
   };
 
   return (
-    <button className="profile__action" type="button" onClick={openLoginModal}>
+    <button
+      className="button profile__action"
+      type="button"
+      onClick={openLoginModal}
+    >
       <span>
         <ProfileIcon />
       </span>
