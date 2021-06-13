@@ -23,7 +23,9 @@ const ProfileIcon = () => (
 
 export const Profile = () => {
   const openLoginModal = () => {
-    console.log('Profile >>> openLoginModal');
+    alert(
+      'По этой кнопке должна открываться модалка логина, но ее пока нет. :)'
+    );
   };
 
   return (

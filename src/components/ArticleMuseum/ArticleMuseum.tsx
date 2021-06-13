@@ -2,8 +2,7 @@ import React from 'react';
 import './ArticleMuseum.css';
 
 export const ArticleMuseum = () => (
-  <React.Fragment>
-    {/* табы */}
-    {/* карточки */}
-  </React.Fragment>
+  <p className="typography--22px">
+    Здесь должны быть табы с информацией о музее, но пока их нет. :)
+  </p>
 );
