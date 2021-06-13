@@ -1,8 +1,8 @@
 import React from 'react';
 import './SkipLink.css';
 
-const SkipLink = () => (
-  <a className="button skip-link" href="#main">
+const SkipLink = ({ to }: { to: string }) => (
+  <a className="button skip-link" href={`#${to}`}>
     Перейти к контенту
   </a>
 );
