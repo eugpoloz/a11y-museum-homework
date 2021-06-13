@@ -15,7 +15,7 @@ const NavMainLink = ({ children, ...props }: NavMainLinkProps) => (
 );
 
 const NavMain = () => (
-  <nav id="navigation" className="container nav-main">
+  <nav id="navigation" className="container nav-main typography--18px">
     <ul role="presentation" className="nav-main__list">
       <NavMainLink href="#museum">Музей</NavMainLink>
       <NavMainLink href="#exhibitions">Выставки и события</NavMainLink>

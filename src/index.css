@@ -74,6 +74,13 @@ button:focus {
   cursor: pointer;
 }
 
+/* typography classes */
+
+.typography--18px {
+  font-size: 18px;
+  line-height: 22px;
+}
+
 /* helper classes */
 
 .sr-only {
