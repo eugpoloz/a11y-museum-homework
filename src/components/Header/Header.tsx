@@ -42,9 +42,13 @@ const Header = () => {
     'Государственный музей изобразительных искусств имени А.С. Пушкина';
 
   return (
-    <header className="container">
+    <header className="container header">
       <h1 className="sr-only">{museumName}</h1>
-      <a href="/" title="Перейти на главную: Пушкинский музей">
+      <a
+        className="header__logo"
+        href="/"
+        title="Перейти на главную: Пушкинский музей"
+      >
         <Logo />
       </a>
 

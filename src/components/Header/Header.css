@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  margin-right: auto;
+}
