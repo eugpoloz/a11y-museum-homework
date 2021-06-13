@@ -1,7 +1,7 @@
 import React from 'react';
-import './Museum.css';
+import './ArticleMuseum.css';
 
-export const Museum = () => (
+export const ArticleMuseum = () => (
   <React.Fragment>
     {/* табы */}
     {/* карточки */}
