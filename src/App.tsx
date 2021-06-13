@@ -1,9 +1,10 @@
 import React from 'react';
-import './App.css';
 import { Header, NavMain, SkipLink, Museum } from './components';
+import { NavLink } from './shared/interfaces';
+import './App.css';
 
 function App() {
-  const links = [
+  const links: NavLink[] = [
     {
       href: 'museum',
       title: 'Музей',
