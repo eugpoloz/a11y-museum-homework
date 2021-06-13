@@ -1,10 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import {
-  RichterImage,
-  TattooImage,
-  DurerMatisseImage,
-} from './ExhibitionImages';
+import * as Images from './Images';
 import './ArticleExhibitions.css';
 
 const exhibitionsList = [
@@ -12,7 +8,7 @@ const exhibitionsList = [
     id: 'richter',
     filterKey: 'tomorrow',
     title: 'Святослав Рихтер в кругу друзей. Москва — Коктебель',
-    svg: <RichterImage />,
+    svg: <Images.RichterImage />,
     date: '27 ноября',
     children:
       'Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст',
@@ -21,7 +17,7 @@ const exhibitionsList = [
     id: 'tattoo',
     filterKey: 'today',
     title: 'Тату',
-    svg: <TattooImage />,
+    svg: <Images.TattooImage />,
     date: '27 сентября',
     children:
       'Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст',
@@ -31,7 +27,7 @@ const exhibitionsList = [
     id: 'durer-matisse',
     title:
       'От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина',
-    svg: <DurerMatisseImage />,
+    svg: <Images.DurerMatisseImage />,
     date: '1 ноября',
     children:
       'Текст о музее текст Текст о музее текст Текст о музее текст Текст о музее текст',

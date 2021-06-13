@@ -20,7 +20,7 @@ const SvgWrapper = (props: SvgWrapperProps) => (
   </svg>
 );
 
-export const RichterImage = () => (
+const RichterImage = () => (
   <SvgWrapper fill="url(#pattern-richter)">
     <defs>
       <pattern
@@ -44,7 +44,7 @@ export const RichterImage = () => (
   </SvgWrapper>
 );
 
-export const TattooImage = () => (
+const TattooImage = () => (
   <SvgWrapper fill="url(#pattern-tattoo)">
     <defs>
       <pattern
@@ -68,7 +68,7 @@ export const TattooImage = () => (
   </SvgWrapper>
 );
 
-export const DurerMatisseImage = () => (
+const DurerMatisseImage = () => (
   <SvgWrapper fill="url(#pattern-durer-matisse)">
     <defs>
       <pattern
@@ -91,3 +91,5 @@ export const DurerMatisseImage = () => (
     </defs>
   </SvgWrapper>
 );
+
+export { RichterImage, TattooImage, DurerMatisseImage };
