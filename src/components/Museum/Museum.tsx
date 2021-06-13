@@ -1,10 +1,9 @@
 import React from 'react';
 import './Museum.css';
-import { Article } from '../../shared';
 
-export const Museum = (props: { id: string }) => (
-  <Article title="Музей" {...props}>
+export const Museum = () => (
+  <React.Fragment>
     {/* табы */}
     {/* карточки */}
-  </Article>
+  </React.Fragment>
 );

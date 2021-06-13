@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, NavMain, SkipLink, Museum } from './components';
+import { Article } from './shared';
 import { NavLink } from './shared/interfaces';
 import './App.css';
 
@@ -8,6 +9,7 @@ function App() {
     {
       href: 'museum',
       title: 'Музей',
+      children: <Museum />,
     },
     {
       href: 'exhibitions',
@@ -23,6 +25,12 @@ function App() {
     },
   ];
 
+  const articles = links.map(({ href, title, children }: NavLink) => (
+    <Article key={'article-' + href} id={href} title={title}>
+      {children}
+    </Article>
+  ));
+
   return (
     <div className="museum-app">
       <SkipLink to="main" />
@@ -30,7 +38,7 @@ function App() {
 
       <main id="main">
         <NavMain links={links} />
-        <Museum id="museum" />
+        {articles}
       </main>
 
       {/* footer */}
