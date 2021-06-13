@@ -4,8 +4,9 @@ import { Footer } from './Footer/Footer';
 import NavMain from './NavMain/NavMain';
 import { SiteNav } from './SiteNav/SiteNav';
 import { ArticleMuseum } from './ArticleMuseum/ArticleMuseum';
-import { ArticleLives } from './ArticleLives/ArticleLives';
+import { ArticleExhibitions } from './ArticleExhibitions/ArticleExhibitions';
 import { ArticleStreams } from './ArticleStreams/ArticleStreams';
+import { ArticleLives } from './ArticleLives/ArticleLives';
 
 export {
   SkipLink,
@@ -13,7 +14,8 @@ export {
   NavMain,
   SiteNav,
   ArticleMuseum,
-  ArticleLives,
+  ArticleExhibitions,
   ArticleStreams,
+  ArticleLives,
   Footer,
 };

@@ -14,6 +14,7 @@ function App() {
     {
       href: 'exhibitions',
       title: 'Выставки и события',
+      children: <Components.ArticleExhibitions />,
     },
     {
       href: 'streams',
