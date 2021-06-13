@@ -34,7 +34,7 @@ function App() {
   ));
 
   return (
-    <div className="museum-app">
+    <React.Fragment>
       <Components.SkipLink to="main" />
       <Components.Header />
 
@@ -43,9 +43,8 @@ function App() {
         {articles}
       </main>
 
-      {/* footer */}
-      <footer></footer>
-    </div>
+      <Components.Footer />
+    </React.Fragment>
   );
 }
 

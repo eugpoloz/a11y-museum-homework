@@ -87,6 +87,11 @@ input:focus {
   line-height: 26px;
 }
 
+.typography--24px {
+  font-size: 24px;
+  line-height: 28px;
+}
+
 /* helper classes */
 
 .sr-only {
