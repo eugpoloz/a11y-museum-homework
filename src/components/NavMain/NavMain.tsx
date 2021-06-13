@@ -14,15 +14,25 @@ const NavMainLink = ({ children, ...props }: NavMainLinkProps) => (
   </li>
 );
 
-const NavMain = () => (
-  <nav id="navigation" className="container nav-main typography--18px">
-    <ul role="presentation" className="nav-main__list">
-      <NavMainLink href="#museum">Музей</NavMainLink>
-      <NavMainLink href="#exhibitions">Выставки и события</NavMainLink>
-      <NavMainLink href="#online-streams">Онлайн-трансляции</NavMainLink>
-      <NavMainLink href="#live">Экскурсии и лекции в прямом эфире</NavMainLink>
-    </ul>
-  </nav>
-);
+interface Link {
+  href: string;
+  title: string;
+}
+
+const NavMain = ({ links }: { links: Link[] }) => {
+  const linksList = links.map(({ href, title }: Link) => (
+    <NavMainLink key={href} href={'#' + href}>
+      {title}
+    </NavMainLink>
+  ));
+
+  return (
+    <nav id="navigation" className="container nav-main typography--18px">
+      <ul role="presentation" className="nav-main__list">
+        {linksList}
+      </ul>
+    </nav>
+  );
+};
 
 export default NavMain;
