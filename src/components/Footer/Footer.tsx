@@ -64,13 +64,19 @@ export const Footer = () => {
             <h3 className="sr-only">Дополнительная информация</h3>
             <ul role="presentation" className="footer-nav__list">
               <li className="footer-nav__item">
-                <a href="#">Посетителям с ограниченными возможностями</a>
+                <a className="link" href="#">
+                  Посетителям с ограниченными возможностями
+                </a>
               </li>
               <li className="footer-nav__item">
-                <a href="#">Билеты и льготы</a>
+                <a className="link" href="#">
+                  Билеты и льготы
+                </a>
               </li>
               <li className="footer-nav__item">
-                <a href="#">Противодействие коррупции</a>
+                <a className="link" href="#">
+                  Противодействие коррупции
+                </a>
               </li>
             </ul>
           </nav>
@@ -81,7 +87,7 @@ export const Footer = () => {
             <ul role="presentation" className="footer-social__list">
               <li className="footer-social__item">
                 <a
-                  className="footer-social__link"
+                  className="link footer-social__link"
                   title="Напишите нам на email"
                   href="mailto:tickets@arts-museum.ru"
                 >
@@ -90,7 +96,7 @@ export const Footer = () => {
               </li>
               <li className="footer-social__item">
                 <a
-                  className="footer-social__link"
+                  className="link footer-social__link"
                   title="Подпишитесь на наш канал в Telegram"
                   href="https://t.me/theartsmuseum"
                 >
@@ -99,7 +105,7 @@ export const Footer = () => {
               </li>
               <li className="footer-social__item">
                 <a
-                  className="footer-social__link"
+                  className="link footer-social__link"
                   title="Присоединяйтесь к нашей группе в Facebook"
                   href="https://www.facebook.com/theartsmuseum/"
                 >

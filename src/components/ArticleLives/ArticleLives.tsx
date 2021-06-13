@@ -12,14 +12,16 @@ export const ArticleLives = () => (
       (лектору).
       <br aria-hidden="true" />
       <a
+        className="link"
         href="#"
         title="Узнать, как присоединиться к нашим виртуальным мероприятиям."
       >
         <span aria-hidden="true">Подробнее.</span>
       </a>
     </p>
+    {/* prettier-ignore */}
     <p className="typography--22px">
-      Мы будем благодарны за любое <a href="#">пожертвование</a>. Все
+      Мы будем благодарны за любое <a className="link" href="#">пожертвование</a>. Все
       поступившие средства будут направлены на организацию онлайн-проектов для
       наших посетителей.
     </p>
