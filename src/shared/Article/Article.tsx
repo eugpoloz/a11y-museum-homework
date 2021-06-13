@@ -8,8 +8,8 @@ interface ArticleProps {
 }
 
 export const Article = ({ children, title, ...props }: ArticleProps) => (
-  <article className="container" {...props}>
-    <h2 className="typography--h2">{title}</h2>
+  <article className="container article" {...props}>
+    <h2 className="article__title typography--h2">{title}</h2>
 
     {children}
   </article>
