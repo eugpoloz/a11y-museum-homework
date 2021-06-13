@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Header, NavMain, SkipLink } from './components';
+import { Header, NavMain, SkipLink, Museum } from './components';
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <SkipLink to="museum" />
       <Header />
       <NavMain />
+      <Museum id="museum" />
 
       {/* footer */}
       <footer></footer>

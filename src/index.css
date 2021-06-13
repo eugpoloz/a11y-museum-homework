@@ -82,6 +82,11 @@ input:focus {
   line-height: 22px;
 }
 
+.typography--h2 {
+  font-size: 50px;
+  line-height: 59px;
+}
+
 /* helper classes */
 
 .sr-only {

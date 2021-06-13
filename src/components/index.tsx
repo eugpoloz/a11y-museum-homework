@@ -1,5 +1,6 @@
+import SkipLink from './SkipLink/SkipLink';
 import Header from './Header/Header';
 import NavMain from './NavMain/NavMain';
-import SkipLink from './SkipLink/SkipLink';
+import { Museum } from './Museum/Museum';
 
-export { Header, NavMain, SkipLink };
+export { Header, NavMain, SkipLink, Museum };
