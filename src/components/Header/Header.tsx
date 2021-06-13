@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import { Search } from '../Search/Search';
+import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 
 const Logo = () => (
   <svg
@@ -47,7 +48,7 @@ const Header = () => {
       </a>
 
       <Search />
-      {/* переключалка языков */}
+      <LanguageSwitcher />
       {/* иконка профиля */}
     </header>
   );
