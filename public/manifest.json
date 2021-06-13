@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Пушкинский музей",
+  "name": "Государственный музей изобразительных искусств имени А.С. Пушкина",
   "icons": [
     {
       "src": "favicon.ico",
