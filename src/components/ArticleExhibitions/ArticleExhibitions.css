@@ -1,0 +1,26 @@
+.exhibitions__container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+}
+
+.exhibition-card {
+  margin: 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 312px;
+}
+
+.exhibition-card__title {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.exhibition-card__date {
+  margin-bottom: 8px;
+}
