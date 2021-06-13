@@ -24,6 +24,7 @@ code {
 
 .container {
   position: relative;
+  display: block;
   width: 100%;
   max-width: 1180px;
   padding: 16px 6.27%;
