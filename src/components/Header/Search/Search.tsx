@@ -52,7 +52,11 @@ export const Search = () => {
           aria-label="Введите ваш поисковый запрос"
         />
       </label>
-      <button className="search__action" type="submit" aria-label="Найти">
+      <button
+        className="button search__action"
+        type="submit"
+        aria-label="Найти"
+      >
         <span>
           <SearchIcon className="search__icon" />
         </span>
