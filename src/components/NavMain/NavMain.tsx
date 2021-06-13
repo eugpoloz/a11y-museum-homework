@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from '../../shared/interfaces';
 import './NavMain.css';
 
 interface NavMainLinkProps {
@@ -14,13 +15,12 @@ const NavMainLink = ({ children, ...props }: NavMainLinkProps) => (
   </li>
 );
 
-interface Link {
-  href: string;
-  title: string;
+interface NavMainProps {
+  links: NavLink[];
 }
 
-const NavMain = ({ links }: { links: Link[] }) => {
-  const linksList = links.map(({ href, title }: Link) => (
+const NavMain = ({ links }: NavMainProps) => {
+  const linksList = links.map(({ href, title }: NavLink) => (
     <NavMainLink key={href} href={'#' + href}>
       {title}
     </NavMainLink>
