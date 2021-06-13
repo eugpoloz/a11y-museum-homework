@@ -7,3 +7,16 @@
   padding-top: 73px;
   padding-bottom: 95px;
 }
+
+/* навигация */
+
+.footer-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav__item {
+  margin-bottom: 16px;
+  padding: 0;
+}
