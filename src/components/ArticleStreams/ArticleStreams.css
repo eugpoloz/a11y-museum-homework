@@ -1,4 +1,18 @@
 .stream {
+  position: relative;
   display: block;
+  height: 0;
   margin: 0 auto;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.stream iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border-width: 0;
+  outline-width: 0;
 }
