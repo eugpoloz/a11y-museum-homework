@@ -93,7 +93,9 @@ export const ArticleExhibitions = () => {
 
       return true;
     })
-    .map(({ filterKey, ...props }) => <ExhibitionCard {...props} />);
+    .map(({ filterKey, ...props }) => (
+      <ExhibitionCard key={props.id} {...props} />
+    ));
 
   return (
     <React.Fragment>
