@@ -29,8 +29,6 @@ code {
   max-width: 1180px;
   margin: 0 auto;
   padding: 16px 6.27%;
-  font-size: 18px;
-  line-height: 22px;
 }
 
 /* interactive elements */
@@ -82,6 +80,11 @@ input:focus {
 .typography--18px {
   font-size: 18px;
   line-height: 22px;
+}
+
+.typography--22px {
+  font-size: 22px;
+  line-height: 26px;
 }
 
 /* helper classes */

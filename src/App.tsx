@@ -1,5 +1,11 @@
 import React from 'react';
-import { Header, NavMain, SkipLink, ArticleMuseum } from './components';
+import {
+  Header,
+  NavMain,
+  SkipLink,
+  ArticleMuseum,
+  ArticleLives,
+} from './components';
 import { Article } from './shared';
 import { NavLink } from './shared/interfaces';
 import './App.css';
@@ -22,6 +28,7 @@ function App() {
     {
       href: 'lives',
       title: 'Экскурсии и лекции в прямом эфире',
+      children: <ArticleLives />,
     },
   ];
 
