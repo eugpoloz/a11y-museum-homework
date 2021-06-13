@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/a11y-museum-homework/static/css/main.6840ef95.chunk.css",
-    "main.js": "/a11y-museum-homework/static/js/main.de976c4a.chunk.js",
-    "main.js.map": "/a11y-museum-homework/static/js/main.de976c4a.chunk.js.map",
+    "main.css": "/a11y-museum-homework/static/css/main.5125c58a.chunk.css",
+    "main.js": "/a11y-museum-homework/static/js/main.048617b1.chunk.js",
+    "main.js.map": "/a11y-museum-homework/static/js/main.048617b1.chunk.js.map",
     "runtime-main.js": "/a11y-museum-homework/static/js/runtime-main.fc5af26b.js",
     "runtime-main.js.map": "/a11y-museum-homework/static/js/runtime-main.fc5af26b.js.map",
     "static/js/2.2a39edad.chunk.js": "/a11y-museum-homework/static/js/2.2a39edad.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.5e2deeea.chunk.js": "/a11y-museum-homework/static/js/3.5e2deeea.chunk.js",
     "static/js/3.5e2deeea.chunk.js.map": "/a11y-museum-homework/static/js/3.5e2deeea.chunk.js.map",
     "index.html": "/a11y-museum-homework/index.html",
-    "static/css/main.6840ef95.chunk.css.map": "/a11y-museum-homework/static/css/main.6840ef95.chunk.css.map",
+    "static/css/main.5125c58a.chunk.css.map": "/a11y-museum-homework/static/css/main.5125c58a.chunk.css.map",
     "static/js/2.2a39edad.chunk.js.LICENSE.txt": "/a11y-museum-homework/static/js/2.2a39edad.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fc5af26b.js",
     "static/js/2.2a39edad.chunk.js",
-    "static/css/main.6840ef95.chunk.css",
-    "static/js/main.de976c4a.chunk.js"
+    "static/css/main.5125c58a.chunk.css",
+    "static/js/main.048617b1.chunk.js"
   ]
 }
