@@ -1,0 +1,26 @@
+.profile__action {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.profile__action span {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__action:hover {
+  background-color: #c7d2e9;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .profile__action {
+    transition: background-color 0.3s ease;
+  }
+}
