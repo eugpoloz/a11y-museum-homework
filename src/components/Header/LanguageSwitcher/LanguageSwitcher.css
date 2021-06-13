@@ -1,0 +1,9 @@
+.lang__container {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0 18px;
+}
+
+.lang:not(:first-of-type) {
+  margin-left: 8px;
+}
