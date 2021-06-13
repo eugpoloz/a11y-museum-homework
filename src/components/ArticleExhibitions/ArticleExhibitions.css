@@ -1,28 +1,36 @@
-.exhibitions__container {
+.exhibitions__filters {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
   align-content: flex-start;
   justify-content: flex-start;
-}
-
-.exhibitions__container--filters {
   padding-bottom: 8px;
 }
 
-.exhibitions__container--cards {
-  width: calc(100% + 40px);
-  max-width: 1220px;
-  margin-left: -20px;
+.exhibitions__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(312px, 100%), 312px));
+  align-items: start;
+  align-content: start;
+  justify-content: start;
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .exhibition-card {
-  margin: 20px;
-  margin-right: 19px;
+  display: block;
   flex-grow: 0;
   flex-shrink: 0;
   width: 100%;
   max-width: 312px;
+}
+
+.exhibition-card__img {
+  width: 100%;
+  max-width: 312px;
+  height: auto;
+  max-height: 148px;
 }
 
 .exhibition-card__title {

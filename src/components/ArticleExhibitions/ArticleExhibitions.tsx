@@ -50,24 +50,23 @@ const ExhibitionCard = ({
   children,
 }: ExhibitionCardProps) => {
   return (
-    <section id={id} className="exhibition-card" aria-label={title}>
+    <section
+      id={id}
+      className="exhibition-card"
+      aria-label={`Выставка "${title}". До ${date}`}
+    >
       {svg}
-      <h3
-        id={id + '-title'}
-        className="exhibition-card__title typography--26px"
-      >
-        {title}
-      </h3>
-      <p className="exhibition-card__date typography--22px">
+      <h3 className="exhibition-card__title typography--26px">{title}</h3>
+      <p aria-hidden="true" className="exhibition-card__date typography--22px">
         Выставка до {date}
       </p>
       <p className="exhibition-card__content">{children}</p>
       <button
         type="button"
         className="button"
-        aria-labelledby={`${id}-link ${id}-title`}
+        aria-label={`Купить билет на выставку "${title}"`}
       >
-        <span id={id + '-link'}>Купить билет</span>
+        <span aria-hidden="true">Купить билет</span>
       </button>
     </section>
   );
@@ -120,15 +119,11 @@ export const ArticleExhibitions = () => {
   return (
     <React.Fragment>
       <div
-        className="exhibitions__container exhibitions__container--filters"
+        className="exhibitions__filters"
         role="radiogroup"
         aria-controls="exhibition-cards"
-        aria-labelledby="filter"
+        aria-label="Отфильтровать выставки"
       >
-        <span className="sr-only" id="filter">
-          Отфильтровать выставки:
-        </span>
-
         <FilterButton
           currentFilter={currentFilter}
           buttonFilter={null}
@@ -161,8 +156,9 @@ export const ArticleExhibitions = () => {
       </div>
 
       <output
-        className="exhibitions__container exhibitions__container--cards"
+        className="exhibitions__cards"
         id="exhibition-cards"
+        aria-label="Список выставок"
       >
         {list?.current.map(({ filterKey, ...props }) => (
           <ExhibitionCard key={props.id} {...props} />

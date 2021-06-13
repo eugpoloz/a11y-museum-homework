@@ -7,6 +7,7 @@ interface SvgWrapperProps {
 
 const SvgWrapper = (props: SvgWrapperProps) => (
   <svg
+    className="exhibition-card__img"
     aria-hidden="true"
     width="312"
     height="148"
