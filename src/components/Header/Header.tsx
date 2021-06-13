@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import { Search } from '../Search/Search';
 
 const Logo = () => (
   <svg
@@ -34,19 +35,22 @@ const Logo = () => (
   </svg>
 );
 
-const Header = () => (
-  <header className="container">
-    <a
-      href="/"
-      title="Государственный музей изобразительных искусств имени А.С. Пушкина"
-    >
-      <Logo />
-    </a>
-    {/* заголовок */}
-    {/* поиск */}
-    {/* переключалка языков */}
-    {/* иконка профиля */}
-  </header>
-);
+const Header = () => {
+  const museumName: string =
+    'Государственный музей изобразительных искусств имени А.С. Пушкина';
+
+  return (
+    <header className="container">
+      <h1 className="sr-only">{museumName}</h1>
+      <a href="/" title="Перейти на главную: Пушкинский музей">
+        <Logo />
+      </a>
+
+      <Search />
+      {/* переключалка языков */}
+      {/* иконка профиля */}
+    </header>
+  );
+};
 
 export default Header;
