@@ -27,7 +27,11 @@ const NavMain = ({ links }: NavMainProps) => {
   ));
 
   return (
-    <nav id="navigation" className="container nav-main typography--18px">
+    <nav
+      id="navigation"
+      className="container nav-main typography--18px"
+      aria-label="Разделы сайта"
+    >
       <ul role="presentation" className="nav-main__list">
         {linksList}
       </ul>
