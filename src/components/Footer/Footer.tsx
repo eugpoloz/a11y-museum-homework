@@ -121,7 +121,7 @@ export const Footer = () => {
               <span>Соглашаюсь на обработку персональных данных</span>
             </label>
 
-            <button type="submit" className="button">
+            <button type="submit" className="button button--accent">
               Подписаться
             </button>
           </form>
