@@ -1,6 +1,7 @@
 .site-nav {
   display: block;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .site-nav__list {
