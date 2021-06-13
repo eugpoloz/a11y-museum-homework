@@ -5,10 +5,13 @@ import { Header, NavMain, SkipLink, Museum } from './components';
 function App() {
   return (
     <div className="museum-app">
-      <SkipLink to="museum" />
+      <SkipLink to="main" />
       <Header />
-      <NavMain />
-      <Museum id="museum" />
+
+      <main id="main">
+        <NavMain />
+        <Museum id="museum" />
+      </main>
 
       {/* footer */}
       <footer></footer>
