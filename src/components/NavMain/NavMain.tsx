@@ -30,8 +30,11 @@ const NavMain = ({ links }: NavMainProps) => {
     <nav
       id="navigation"
       className="container nav-main typography--18px"
-      aria-label="Разделы главной страницы"
+      aria-labelledby="nav-main-title"
     >
+      <h2 id="nav-main-title" className="sr-only">
+        Перейти к разделам главной страницы
+      </h2>
       <ul role="presentation" className="nav-main__list">
         {linksList}
       </ul>

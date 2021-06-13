@@ -6,8 +6,12 @@ export const SiteNav = () => {
     <nav
       id="site-nav"
       className="container site-nav typography--18px"
-      aria-label="Разделы сайта"
+      aria-labelledby="site-nav-title"
     >
+      <h2 id="site-nav-title" className="sr-only">
+        Перейти к другим разделам сайта
+      </h2>
+
       <ul role="presentation" className="site-nav__list">
         <li className="site-nav__item">
           <a

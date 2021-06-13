@@ -57,11 +57,17 @@ const IconFacebook = () => (
 export const Footer = () => {
   return (
     <footer className="footer__container">
-      <div className="footer container">
+      <div className="footer container" role="presentation">
         <section className="footer__section">
           {/* навигация */}
-          <nav id="footer-nav" className="footer-nav typography--18px">
-            <h3 className="sr-only">Дополнительная информация</h3>
+          <nav
+            id="footer-nav"
+            className="footer-nav typography--18px"
+            aria-labelledby="footer-nav-title"
+          >
+            <h3 id="footer-nav-title" className="sr-only">
+              Дополнительные ссылки
+            </h3>
             <ul role="presentation" className="footer-nav__list">
               <li className="footer-nav__item">
                 <a className="link" href="#">
@@ -82,8 +88,17 @@ export const Footer = () => {
           </nav>
 
           {/* соцсети */}
-          <nav id="footer-social" className="typography--18px">
-            <h3 className="typography--22px footer__title">Социальные сети</h3>
+          <nav
+            id="footer-social"
+            className="typography--18px"
+            aria-labelledby="footer-social-title"
+          >
+            <h3
+              id="footer-social-title"
+              className="typography--22px footer__title"
+            >
+              Социальные сети
+            </h3>
             <ul role="presentation" className="footer-social__list">
               <li className="footer-social__item">
                 <a
