@@ -4,14 +4,14 @@ import { Header, NavMain, SkipLink } from './components';
 
 function App() {
   return (
-    <React.Fragment>
+    <div className="museum-app">
       <SkipLink />
       <Header />
       <NavMain />
 
       {/* footer */}
       <footer></footer>
-    </React.Fragment>
+    </div>
   );
 }
 
