@@ -126,7 +126,7 @@ export const ArticleExhibitions = () => {
         aria-labelledby="filter"
       >
         <span className="sr-only" id="filter">
-          Применить фильтр:
+          Отфильтровать выставки:
         </span>
 
         <FilterButton
@@ -163,7 +163,6 @@ export const ArticleExhibitions = () => {
       <output
         className="exhibitions__container exhibitions__container--cards"
         id="exhibition-cards"
-        role="presentation"
       >
         {list?.current.map(({ filterKey, ...props }) => (
           <ExhibitionCard key={props.id} {...props} />
