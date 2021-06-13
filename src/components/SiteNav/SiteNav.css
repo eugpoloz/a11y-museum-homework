@@ -1,0 +1,20 @@
+.site-nav {
+  display: block;
+  width: 100%;
+}
+
+.site-nav__list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.site-nav__item {
+  margin-top: 8px;
+}
+
+.site-nav__item:not(:last-of-type) {
+  margin-right: 40px;
+}

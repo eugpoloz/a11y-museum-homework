@@ -40,6 +40,7 @@ function App() {
 
       <main id="main">
         <Components.NavMain links={links} />
+        <Components.SiteNav />
         {articles}
       </main>
 
