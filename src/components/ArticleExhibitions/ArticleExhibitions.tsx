@@ -120,7 +120,7 @@ export const ArticleExhibitions = () => {
   return (
     <React.Fragment>
       <div
-        className="exhibitions__container"
+        className="exhibitions__container exhibitions__container--filters"
         role="radiogroup"
         aria-controls="exhibition-cards"
         aria-labelledby="filter"
