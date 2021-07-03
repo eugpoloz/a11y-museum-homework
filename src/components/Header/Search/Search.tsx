@@ -38,12 +38,13 @@ export const Search = () => {
   // };
 
   return (
-    <form className="input__wrapper search__form" id="search-form">
-      <label
-        className="search__container input__container"
-        htmlFor="search"
-        aria-label={labelText}
-      >
+    <form
+      role="search"
+      className="input__wrapper search__form"
+      id="search-form"
+    >
+      <label className="search__container input__container" htmlFor="search">
+        <span className="sr-only">{labelText}</span>
         <input
           className="search input typography--18px"
           id="search"
@@ -52,12 +53,9 @@ export const Search = () => {
           aria-label="Введите ваш поисковый запрос"
         />
       </label>
-      <button
-        className="button search__action"
-        type="submit"
-        aria-label="Найти"
-      >
-        <span>
+      <button className="button search__action" type="submit">
+        <span className="sr-only">Найти</span>
+        <span aria-hidden="true">
           <SearchIcon className="search__icon" />
         </span>
       </button>
