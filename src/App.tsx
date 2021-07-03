@@ -9,24 +9,22 @@ const linkList: NavLink[] = [
   {
     href: '#museum',
     title: 'Музей',
-    children: <Components.ArticleMuseum />,
   },
   {
     href: '#exhibitions',
-    title: 'Посетителям',
-    children: <Components.ArticleExhibitions />,
+    title: 'Выставки и события',
   },
   {
-    href: 'https://tickets.pushkinmuseum.art/ru/#id=443',
-    title: 'Купить билет',
+    href: '#streams',
+    title: 'Онлайн-трансляции',
   },
   {
-    href: 'https://pushkinmuseum.art/museum/support_us/donate_online/index.php?lang=ru',
-    title: 'Стать другом',
+    href: '#lives',
+    title: 'Экскурсии и лекции в прямом эфире',
   },
   {
     href: 'https://pushkinmuseum.art/media/shopping/index.php?lang=ru',
-    title: 'Онлайн-магазин',
+    title: 'Магазин',
   },
 ];
 
@@ -56,12 +54,6 @@ const articleList: ArticleProps[] = [
 function App() {
   const [activeLanguage, switchActiveLanguage] = React.useState<string>('ru');
 
-  const articles = articleList.map(({ id, title, children }: ArticleProps) => (
-    <Article key={'article-' + id} id={id} title={title}>
-      {children}
-    </Article>
-  ));
-
   return (
     <React.Fragment>
       <LangContext.Provider value={[activeLanguage, switchActiveLanguage]}>
@@ -70,7 +62,11 @@ function App() {
 
         <main id="main">
           <Components.NavMain links={linkList} />
-          {articles}
+          {articleList.map(({ id, title, children }: ArticleProps) => (
+            <Article key={'article-' + id} id={id} title={title}>
+              {children}
+            </Article>
+          ))}
         </main>
 
         <Components.Footer />
