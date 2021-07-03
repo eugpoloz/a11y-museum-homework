@@ -1,3 +1,4 @@
-import { Article } from './Article/Article';
+import { Article, ArticleProps } from './Article/Article';
 
 export { Article };
+export type { ArticleProps };
