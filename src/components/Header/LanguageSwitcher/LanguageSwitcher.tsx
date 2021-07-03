@@ -1,55 +1,54 @@
 import React from 'react';
+import { LangContext } from '../../../shared/contexts';
 import './LanguageSwitcher.css';
 
 interface LanguageButtonProps {
-  isActive: boolean;
+  lang: string;
   children?: any;
-  onClick?: () => void;
 }
 
 const LanguageButton: React.FC<LanguageButtonProps> = ({
-  isActive,
+  lang,
   children,
-  ...props
+  ...restProps
 }: LanguageButtonProps) => {
-  const activeClassName = isActive ? '' : 'button--link';
+  const [activeLanguage, switchActiveLanguage] = React.useContext(LangContext);
+  const isActive = lang === activeLanguage;
+
+  const Component = isActive ? 'div' : 'button';
+
+  const activeClassName = isActive ? '' : 'lang--active button--link';
+  let buttonProps = {};
+
+  if (isActive) {
+    buttonProps = {
+      type: 'button',
+      disabled: isActive,
+      'aria-pressed': isActive,
+    };
+  }
 
   return (
-    <React.Fragment>
-      <button
-        type="button"
-        className={`lang button ${activeClassName} typography--18px`}
-        {...props}
-        disabled={isActive}
-        aria-pressed={isActive}
-      >
-        {children}
-      </button>
-    </React.Fragment>
+    <Component
+      className={`lang button ${activeClassName} typography--18px`}
+      {...restProps}
+      {...buttonProps}
+      onClick={() => switchActiveLanguage(lang)}
+    >
+      <span>{children}</span>
+    </Component>
   );
 };
 
 export const LanguageSwitcher = () => {
-  const [activeLanguage, switchActiveLanguage] = React.useState<string>('ru');
-
   return (
-    <div className="lang__container">
-      <LanguageButton
-        isActive={activeLanguage === 'ru'}
-        onClick={() => {
-          switchActiveLanguage('ru');
-        }}
-      >
-        <span aria-label="Переключиться на русский язык">Ру</span>
+    <nav aria-label="Выбрать язык" className="lang__container">
+      <LanguageButton lang="ru" aria-label="Переключиться на русский язык">
+        Ру
       </LanguageButton>
-      <LanguageButton
-        isActive={activeLanguage === 'en'}
-        onClick={() => {
-          switchActiveLanguage('en');
-        }}
-      >
-        <span aria-label="Switch to English">En</span>
+      <LanguageButton lang="en" aria-label="Switch to English">
+        En
       </LanguageButton>
-    </div>
+    </nav>
   );
 };

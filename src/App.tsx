@@ -1,9 +1,9 @@
 import React from 'react';
 import * as Components from './components';
-import { Article } from './shared';
+import { Article, ArticleProps } from './shared';
 import { NavLink } from './shared/interfaces';
+import { LangContext } from './shared/contexts';
 import './App.css';
-import { ArticleProps } from './shared/Article/Article';
 
 const linkList: NavLink[] = [
   {
@@ -54,6 +54,8 @@ const articleList: ArticleProps[] = [
 ];
 
 function App() {
+  const [activeLanguage, switchActiveLanguage] = React.useState<string>('ru');
+
   const articles = articleList.map(({ id, title, children }: ArticleProps) => (
     <Article key={'article-' + id} id={id} title={title}>
       {children}
@@ -62,15 +64,17 @@ function App() {
 
   return (
     <React.Fragment>
-      <Components.SkipLink to="main" />
-      <Components.Header />
+      <LangContext.Provider value={[activeLanguage, switchActiveLanguage]}>
+        <Components.SkipLink to="main" />
+        <Components.Header />
 
-      <main id="main">
-        <Components.NavMain links={linkList} />
-        {articles}
-      </main>
+        <main id="main">
+          <Components.NavMain links={linkList} />
+          {articles}
+        </main>
 
-      <Components.Footer />
+        <Components.Footer />
+      </LangContext.Provider>
     </React.Fragment>
   );
 }
